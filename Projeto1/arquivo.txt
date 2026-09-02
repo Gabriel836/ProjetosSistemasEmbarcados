@@ -1,0 +1,117 @@
+SEL0630- PROJETOS EM SISTEMAS EMBARCADOS
+Prática 1.
+Alunos:	Gabriel Dezejacomo Maruschi - 14571525
+	Matheus Cavalcanti de Santana - 13217506
+	
+Histórico de comandos:
+sel@raspberrypi:~/Documentos/libMG $ sudo passwd root
+sel@raspberrypi:~/Documentos/libMG $ reboot
+sel@raspberrypi:~/Documentos/libMG $ sudo raspi-config
+
+sel@raspberrypi:~/Documentos/libMG $ sudo apt install neofetch
+Erro: Não é possível encontrar o pacote neofetch
+sel@raspberrypi:~/Documentos/libMG $ sudo apt install fastfetch
+
+sel@raspberrypi:~/Documentos/libMG $ fastfetch
+sel@raspberrypi:~/Documentos/libMG $ pinout
+sel@raspberrypi:~/Documentos/libMG $ sudo apt update && sudo apt upgrade
+sel@raspberrypi:~/Documentos/libMG $ ifconfig
+sel@raspberrypi:~/Documentos/libMG $ scp /home/sel/Documentos/libMG/arquivo sel@192.168.1.102:/home/
+sel@raspberrypi:~/Documentos/libMG $ sudo rpi-update cac01bed1224743104cb2a4103605f269f207b1a#6.1.54
+
+---------------------------------------------------------------------------------------------------------
+Perguntas:
+1.
+Raspberry Pi 3 Model B+:
+Processador Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit SoC @ 1.4GHz
+1GB SDRAM
+4 USB 2.0
+Header GPIO de 40 pinos
+HDMI
+Micro SD port
+5V/2.4A power input
+
+Raspberry Pi 4B:
+Processador Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.8GHz
+1GB, 2GB, 3GB, 4GB or 8GB LPDDR4 (dependendo do modelo)
+2x USB 3.0 e 2x USB 2.0
+Header GPIO de 40 pinos
+2x micro HDMI
+Micro SD port
+5V/3A via USB-C e 5V/3A via GPIO header
+
+Raspberry Pi 5:
+Processador Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76
+Dual 4Kp60 HDMI
+LPDDR4X-4267 SDRAM (1GB, 2GB, 4GB, 8GB, and 16GB)
+microSD card slot
+2 × USB 3.0 ports, 2 × USB 2.0 ports
+5V/5A DC power via USB-C
+standard 40-pin header
+Botão de power
+
+2.
+O SoC BCM2837B0, usado na Raspberry Pi 3 Model B+, apresenta a CPU Cortex-A53 (low-power), que implementa a arquitetura Armv8-A 64-bit em 4 cores a 1.4GHz. Cada core possui uma memória cache L1 (até 64Kb, a depender da configuração), sendo a L2 (até 2Mb) compartilhada. A interface serial apresenta suporte para SPI, SSP e LoSSI. Apresenta também interface para protocolos UART e mini UART. Por fim, a GPU é a Video Core IV, com suporte para 720p, 400MHz, OpenGL-ES 1.1/2.0 e 4x multisample antialiasing. 
+O Soc BCM2711, por sua vez, possui CPU Cortex-A72, de mesma arquitetura 64-bit, com um a quatro cores por processador, a 1.5GHz *. Possui distribuição semelhante das memórias caches L1 (48Kb instruction cache e 32Kb data cache) e L2 (até 4Mb). Possui suporte e interface para protocolos SPI, SSP, LoSSI. Possui também 1 mini UART e 5 PL011 UARTs. A GPU é a Video Core IV, rodando até 500MHz, com suporte para H.265(4K60p decode) e H.264(1080p60 decode, 1080p60 encode), OpenGL-ES 3.0.
+Por fim, o BCM2712, usado na Raspberry Pi 5 possui CPU Cortex-A76, com implementação da mesma arquitetura 64-bit (com suporte para ISAs A64, A32 e T32), com destaque para o suporte para instruções de produto escalar (dot product). Memória cache L1 (64Kb para instruções e 64Kb para dados) individual e memória L2 (512Kb por core)com protocolo de coerência MESI. A referência [2] menciona a presença de uma L3 de 2Mb. Continua possuindo interface para os protocolos de comunicação serial. GPU VideoCore VII, com 960MHz e suporte para OpenGL ES 3.1
+
+[colocar de mais dois socs]
+
+
+*Refência [1] menciona a frequência de clock em 1.8GHz, enquanto a Referência [2] menciona 1.5GHz para o SoC.
+
+Referências
+[1] https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/
+[2] https://www.raspberrypi.com/documentation/computers/processors.html#bcm2835
+[3] RASPBERRY PI LTD. BCM2711 ARM Peripherals. Version 1.4. Cambridge: Raspberry Pi Ltd., 2022. Disponível em: https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008248-DS-1-bcm2711-peripherals.pdf. Acesso em: 25 ago. 2026.
+[4] https://support.arm.com/documentation/100095/0003
+[5] https://support.arm.com/documentation/ddi0500/latest/
+[6] BROADCOM CORPORATION. VideoCore IV 3D Architecture Reference Guide. Revision VideoCoreIV-AG100-R. Irvine: Broadcom Corporation, 2013. Disponível em: https://docs.broadcom.com/doc/12358545. Acesso em: 25 ago. 2026.
+[7] BROADCOM CORPORATION. BCM2835 ARM Peripherals. Cambridge: Broadcom Europe Ltd., 2012. Disponível em: https://datasheets.raspberrypi.com/bcm2835/bcm2835-peripherals.pdf. Acesso em: 25 ago. 2026.
+[8] https://support.arm.com/documentation/100798/0401?lang=en
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
