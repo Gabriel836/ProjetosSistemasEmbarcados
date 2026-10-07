@@ -10,6 +10,3 @@ while True:
     sleep(1)
     led.value = 1
     sleep(1)
-    led.value = 0
-    led.pulse()
-    sleep(1)

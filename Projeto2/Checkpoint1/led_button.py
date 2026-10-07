@@ -2,10 +2,10 @@ import RPi.GPIO as GPIO
 import time
 
 # GPIO usados
-BUTTON_PIN = 4
-LED_PIN = 17
+BUTTON_PIN = 15
+LED_PIN = 11
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 # Desabilita avisos
 GPIO.setwarnings(False)
