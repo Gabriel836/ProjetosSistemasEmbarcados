@@ -1,0 +1,11 @@
+[Unit]
+Description=PiscaPisca
+After=multi-user.target
+
+[Service]
+ExecStart=/home/sel/2506/ProjetosSistemasEmbarcados/Projeto4/blink.sh
+#ExecStop
+user=sel
+
+[Install]
+WantedBy=multi-user.target

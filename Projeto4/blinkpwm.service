@@ -1,0 +1,12 @@
+[Unit]
+Description=BlinkEpwm
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3
+ExecStart=/home/sel/2506/ProjetosSistemasEmbarcados/Projeto4/blinkLed.py
+ExecStop=/home/sel/2506/ProjetosSistemasEmbarcados/Projeto4/pwmLed.py
+
+[Install]
+Wantedby=multi-user.target
+
