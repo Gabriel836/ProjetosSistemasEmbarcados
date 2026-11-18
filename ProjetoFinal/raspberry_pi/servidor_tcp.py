@@ -43,6 +43,7 @@ def enviar(cliente: socket.socket, mensagem: str) -> None:
 def processar(cliente: socket.socket, mensagem: str) -> None:
     campos = mensagem.split("|")
     if campos[0] == "PING" and len(campos) == 3 and campos[1].isdigit():
+        log("ESP32 -> RPI: " + mensagem)
         enviar(cliente, f"PONG|{campos[1]}|{int(time.time())}")
     elif campos[0] == "DATA":
         # Periodico. Util para observar a maquina em tempo real.
